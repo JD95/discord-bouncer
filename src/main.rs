@@ -19,7 +19,7 @@ async fn handle_voice(ctx: Context, opt_gid: Option<GuildId>, st: VoiceState) ->
     let channel = st.channel_id?;
     let name = channel.name(&ctx).await?;
     if let Some(roles) = member.roles(&ctx).await {
-        if let Some(_r) = roles.iter().filter(|r| r.name == "No bounce").next() {
+        if let Some(_r) = roles.iter().filter(|r| r.name == "No Bounce").next() {
             return Some(());
         }
     }
